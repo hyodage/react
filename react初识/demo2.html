@@ -1,0 +1,20 @@
+<head>
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let h1 = React.createElement("h1", null, "这是标题");
+      let p = React.createElement("p", null, "这是副标题");
+      let header = React.createElement("header", {
+        id: "header"
+      },
+        [h1, p]
+      );
+      ReactDOM.render(
+        header,
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
